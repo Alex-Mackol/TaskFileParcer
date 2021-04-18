@@ -10,12 +10,9 @@ namespace TaskFileParcer.Models.ClassModel
     class Parcer : ICountWords, IChangeString
     {
         public string Link { get; set; }
-
         public string WordToCount { get; set; }
         public string StringToFind { get; set; }
         public string StringToChange { get; set; }
-
-
 
         public Parcer(string link, string wordToCount)
         {

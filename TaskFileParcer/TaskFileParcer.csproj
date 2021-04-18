@@ -43,20 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\ControllerModel\FactoryForParcer.cs" />
     <Compile Include="Controllers\ControllerModel\ParcerController.cs" />
     <Compile Include="Controllers\ControllerModel\Validator.cs" />
+    <Compile Include="Controllers\InterfaceController\IFactory.cs" />
+    <Compile Include="Controllers\InterfaceController\IValidator.cs" />
     <Compile Include="Models\ClassModel\Parcer.cs" />
     <Compile Include="Models\InterfaceModel\IChangeString.cs" />
     <Compile Include="Models\InterfaceModel\ICountWords.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\InterfaceView\IDisplay.cs" />
     <Compile Include="View\ViewModel\DisplayTakenText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\InterfaceController\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

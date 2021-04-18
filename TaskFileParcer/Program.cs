@@ -1,6 +1,7 @@
 ﻿using System;
 
-using TaskFileParcer.Controllers.ControllerModel; 
+using TaskFileParcer.Controllers.ControllerModel;
+using TaskFileParcer.View.ViewModel;
 
 namespace TaskFileParcer
 {
@@ -8,7 +9,13 @@ namespace TaskFileParcer
     {
         static void Main(string[] args)
         {
-            ParcerController parcerController = new ParcerController();
+            #region Initialize Components
+            Validator validator = new Validator();
+            DisplayTakenText displayText = new DisplayTakenText();
+            FactoryForParcer factory = new FactoryForParcer();
+            #endregion
+
+            ParcerController parcerController = new ParcerController(validator, displayText, factory);
             parcerController.InputText(args);
             Console.ReadKey();
         }
